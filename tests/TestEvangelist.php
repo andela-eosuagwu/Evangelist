@@ -1,10 +1,19 @@
 <?php
-ini_set('display_errors',1);
 
-require "app/libraries/Evangelist.php";
+namespace Test;
 
-$evangelist = new Evangelist('andela-eosuagwu', 'Olanicmi2013');
+use Emeka\Evangelist\client\GetUser;
 
-echo $data = $evangelist->getEvangelist()->url;
 
-?>
+class ExampleTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * A basic functional test example.
+     *
+     * @return void
+     */
+    public function testBasicExample()
+    {
+
+    }
+}

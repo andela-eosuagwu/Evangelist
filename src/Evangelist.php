@@ -2,6 +2,8 @@
 
 namespace Emeka\Evangelist;
 
+use guzzle\guzzle;
+
 class Evangelist
 {
 

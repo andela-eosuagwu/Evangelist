@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="ExampleTest" file="/home/emeka/phpunit/tests/TestEvangelist.php" tests="1" assertions="0" failures="0" errors="0" time="0.004854">
+    <testcase name="testBasicExample" class="ExampleTest" file="/home/emeka/phpunit/tests/TestEvangelist.php" line="11" assertions="0" time="0.004854"/>
+  </testsuite>
+</testsuites>

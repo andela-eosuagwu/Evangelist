@@ -7,9 +7,9 @@ require "vendor/autoload.php";
 use Emeka\Evangelist\client\GetUser;
 
 
-//$t = new GetUser('andela-eosuagwu', 'Olanicmi2013');
+$t = new GetUser('andela-eosuagwu', 'Olanicmi2013');
 
-//echo $t->getCompany();
+echo $t->getCompany();
 
 
 

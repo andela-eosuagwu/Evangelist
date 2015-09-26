@@ -1,19 +1,16 @@
 <?php
-
 namespace Test;
 
+use Emeka\Evangelist\Evangelist;
 use Emeka\Evangelist\client\GetUser;
 
-
-class ExampleTest extends PHPUnit_Framework_TestCase
+class ExampleTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * A basic functional test example.
-     *
-     * @return void
-     */
-    public function testBasicExample()
+
+    public function testUser()
     {
+        // $user = new GetUser('andela-eosuagwu', 'password');
+        // $this->assertEquals(array($user->getEvangeInfo()));
 
     }
 }

@@ -2,20 +2,24 @@
 
 namespace Emeka\Evangelist;
 
-
 class Evangelist
 {
 
-    private $url                 = "https://api.github.com/users/";
-    private $repo;
-    private $github_password;
-    private $github_username;
-    private $response;
+    protected $url                 = "https://api.github.com/users/";
+
+    protected $github_password;
+
+    protected $github_username;
+
+    public $httpOpt;
+
+    protected $getEvangeInfo;
 
     public function __construct ( $github_username, $github_password )
     {
         $this->github_username      = $github_username;
         $this->github_password      = $github_password;
+        $this->getEvangeInfo        = $this->getEvangeInfo();
     }
 
     public function httpOpt()
@@ -33,12 +37,15 @@ class Evangelist
         return $context;
     }
 
-    public function getEvangelistInfo()
+
+    public function getEvangeInfo()
     {
         $url = $this->url . $this->github_username;
-        $this->response = file_get_contents($url, true, $this->httpOpt());
-        return json_decode($this->response);
+        $response = file_get_contents($url, true, $this->httpOpt());
+        return json_decode($response);
     }
+
+
 
 
 
@@ -58,3 +65,8 @@ class Evangelist
 
 
 ?>
+
+
+
+
+

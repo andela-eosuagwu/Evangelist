@@ -4,10 +4,9 @@ ini_set('display_errors',1);
 
 require "vendor/autoload.php";
 
-use Emeka\Evangelist\client\GetUser;
+use Emeka\Evangelist\Client\GetUser;
 
-
-$t = new GetUser('andela-eosuagwu', 'Olanicmi2013');
+$t = new GetUser('andela-eosuagwu');
 
 echo $t->getCompany();
 

@@ -2,8 +2,6 @@
 
 namespace Emeka\Evangelist;
 
-use guzzle\guzzle;
-
 class Evangelist
 {
 
@@ -17,10 +15,9 @@ class Evangelist
 
     protected $getEvangeInfo;
 
-    public function __construct ( $github_username, $github_password )
+    public function __construct ( $github_username )
     {
         $this->github_username      = $github_username;
-        $this->github_password      = $github_password;
         $this->getEvangeInfo        = $this->getEvangeInfo();
         $this->httpOpt              = $this->httpOpt();
     }

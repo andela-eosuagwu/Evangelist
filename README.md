@@ -1,3 +1,6 @@
+
+[![Coverage Status](https://coveralls.io/repos/andela-eosuagwu/Evangelist/badge.svg?branch=master&service=github)](https://coveralls.io/github/andela-eosuagwu/Evangelist?branch=master)
+
 # Evangelist
 This is a light PHP package that helps you access Github user infomation from Github API.
 

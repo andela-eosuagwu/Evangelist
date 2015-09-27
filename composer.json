@@ -1,11 +1,18 @@
 {
     "name": "emeka/evangelist",
-    "description": "",
-    "homepage": "https://github.com/andela-eosuagwu/evangelist",
+    "description": "This is a light PHP package that helps you access Github user infomation from Github API.",
+    "keywords": [
+        "Github Api",
+        "php Github Api",
+        "php Github Evangelist",
+        "php Github Evangelist Api",
+        "Github Api in PHP"
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "emeka",
+            "homepage": "https://github.com/andela-eosuagwu/Evangelist",
             "email": "emekaosuagwuandela@gmail.com",
             "role": "Software Developer"
         }
@@ -27,9 +34,6 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
-        ]
+        "test": "phpunit"
     }
 }

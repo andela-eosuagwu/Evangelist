@@ -27,6 +27,9 @@
         }
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
     }
 }

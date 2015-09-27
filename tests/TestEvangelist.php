@@ -9,8 +9,8 @@ class ExampleTest extends \PHPUnit_Framework_TestCase
 
     public function testUser()
     {
-        // $user = new GetUser('andela-eosuagwu', 'password');
-        // $this->assertEquals(array($user->getEvangeInfo()));
+        $user = new GetUser('andela-eosuagwu');
+        $this->assertEquals(array($user->getEvangeInfo()));
 
     }
 }

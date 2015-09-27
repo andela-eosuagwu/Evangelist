@@ -1,65 +1,84 @@
 <?php
-namespace Emeka\Evangelist\client;
+namespace Emeka\Evangelist\Client;
 
 use Emeka\Evangelist\Evangelist;
 
 class GetUser extends Evangelist
 {
+    protected $github_username;
+
+    public function __construct ($github_username)
+    {
+        $this->github_username = $github_username;
+    }
+
+    public function getGithubUserInfo()
+    {
+        $data =  $this->processUserInfo($this->github_username);
+        return $data;
+    }
+
+    public function getGithubUser()
+    {
+        $data =  $this->processUserInfo($this->github_username);
+        return json_decode($data, true);
+    }
+
     public function getId()
     {
-        return $this->getEvangeInfo->id;
+        return $this->getGithubUser()['id'];
     }
     public function getLogin()
     {
-        return $this->getEvangeInfo->login;
+        return $this->getGithubUser()['login'];
     }
     public function getName()
     {
-        return $this->getEvangeInfo->name;
+        return $this->getGithubUser()['name'];
     }
     public function getAvatar()
     {
-        return $this->getEvangeInfo->avatar_url;
+        return $this->getGithubUser()['avatar_url'];
     }
     public function getUrl()
     {
-        return $this->getEvangeInfo->url;
+        return $this->getGithubUser()['url'];
     }
     public function getHtmlUrl()
     {
-        return $this->getEvangeInfo->html_ur;
+        return $this->getGithubUser()['html_ur'];
     }
     public function getType()
     {
-        return $this->getEvangeInfo->type;
+        return $this->getGithubUser()['type'];
     }
     public function getCompany()
     {
-        return $this->getEvangeInfo->company;
+        return $this->getGithubUser()['company'];
     }
     public function getLocation()
     {
-        return $this->getEvangeInfo->location;
+        return $this->getGithubUser()['location'];
     }
     public function getEmail()
     {
-        return $this->getEvangeInfo->email;
+        return $this->getGithubUser()['email'];
     }
     public function getFollowing()
     {
-        return $this->getEvangeInfo->following;
+        return $this->getGithubUser()['following'];
     }
     public function getFollowers()
     {
-        return $this->getEvangeInfo->followers;
+        return $this->getGithubUser()['followers'];
     }
     public function getCreatedAt()
     {
-        return $this->getEvangeInfo->created_at;
+        return $this->getGithubUser()['created_at'];
     }
     public function getUpdatedAt()
     {
-        return $this->getEvangeInfo->updated_at;
+        return $this->getGithubUser()['updated_at'];
     }
+
 }
-?>

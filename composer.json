@@ -1,6 +1,8 @@
 {
     "name": "emeka/evangelist",
     "description": "This is a light PHP package that helps you access Github user infomation from Github API.",
+    "type": "library",
+    "license": "MIT",
     "keywords": [
         "Github Api",
         "php Github Api",
@@ -8,7 +10,6 @@
         "php Github Evangelist Api",
         "Github Api in PHP"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "emeka",

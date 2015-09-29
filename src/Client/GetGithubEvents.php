@@ -1,14 +1,16 @@
 <?php
+
 namespace Emeka\Evangelist\Client;
 
 use Emeka\Evangelist\Evangelist;
 
 class GetGithubEvents extends Evangelist
 {
+
     /*
     | getGithubEvents fetch current events on Github
     | Accepts no parameter
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubEvents()
     {
@@ -19,7 +21,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserRepoEvent fetch current events on a Github user repo
     | Accepts two parameters @github_username and @github_repo
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserRepoEvent( $github_username, $github_repo )
     {
@@ -30,7 +32,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserRepoIssues fetch issues on a Github user repo
     | Accepts two parameters @github_username and @github_repo
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserRepoIssues( $github_username, $github_repo)
     {
@@ -41,7 +43,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserNetworkEventsIssues fetch network issues on user Github repo
     | Accepts two parameters @github_username and @github_repo
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserNetworkEventsIssues( $github_username, $github_repo)
     {
@@ -52,7 +54,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubOrgEvents fetch org events on Github
     | Accepts one parameter @org
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubOrgEvents( $org )
     {
@@ -63,7 +65,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserLastEvent fetch user last event on Github
     | Accepts one parameter @github_username
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserLastEvent( $github_username )
     {
@@ -74,7 +76,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserLastReceivedEvent fetch user last event Received on Github
     | Accepts one parameter @github_username
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserLastReceivedEvent( $github_username )
     {
@@ -85,7 +87,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserLastEventPerformed fetch user last performed event on Github
     | Accepts one parameter @github_username
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserLastEventPerformed( $github_username )
     {
@@ -96,7 +98,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserLastPublicEventPerformed fetch user last public event on Github
     | Accepts one parameter @github_username
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserLastPublicEventPerformed( $github_username )
     {
@@ -107,7 +109,7 @@ class GetGithubEvents extends Evangelist
     /*
     | getGithubUserOrgLastEvent fetch user org last event on Github
     | Accepts one parameter @github_username
-    | @retrun array of objects
+    | @return array of objects
     */
     public function getGithubUserOrgLastEvent( $github_username, $org )
     {

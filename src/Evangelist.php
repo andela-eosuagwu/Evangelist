@@ -5,9 +5,12 @@ namespace Emeka\Evangelist;
 class Evangelist
 {
 
-    protected $url                 = "https://api.github.com/";
+    protected $url = "https://api.github.com/";
 
-    protected static function processUserInfo($github_username)
+    /*
+    | processUserInfo process user info for GetUser class
+    */
+    protected static function processUserInfo( $github_username )
     {
         $gitfetch = curl_init();
         curl_setopt($gitfetch, CURLOPT_URL, "https://api.github.com/users/$github_username?client_id=513ce061270c479165f3&client_secret=0e8fdd973d153045631b0710db2a0339c3d0d90d");
@@ -19,7 +22,10 @@ class Evangelist
         return $data;
     }
 
-    protected static function processData($url)
+    /*
+    | processData process user info for GetGithubEvents class
+    */
+    protected static function processData( $url )
     {
         $gitfetch = curl_init();
         curl_setopt($gitfetch, CURLOPT_URL, "$url?client_id=513ce061270c479165f3&client_secret=0e8fdd973d153045631b0710db2a0339c3d0d90d");
@@ -30,26 +36,7 @@ class Evangelist
         curl_close($gitfetch);
         return $data;
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
 

@@ -8,13 +8,13 @@ use Dotenv\Dotenv;
 
 use Emeka\Evangelist\Client\GetUser;
 use Emeka\Evangelist\Client\GetGithubEvents;
-use Emeka\Evangelist\Client\GetStatus;
+use Emeka\Evangelist\Client\GetUserStatus;
 
 
 $dotenv = new Dotenv(__DIR__ );
 $dotenv->load();
 $github_username = getenv('github_username');
-$t = new GetStatus($github_username);
+$t = new GetUserStatus($github_username);
 var_dump($t->getStatus());
 
 

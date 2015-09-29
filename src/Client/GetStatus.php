@@ -4,7 +4,7 @@ namespace Emeka\Evangelist\Client;
 
 use Emeka\Evangelist\Evangelist;
 
-class GetStatus extends Evangelist
+class GetUserStatus extends Evangelist
 {
 
     protected $github_username;

@@ -4,13 +4,19 @@ ini_set('display_errors',1);
 
 require "vendor/autoload.php";
 
+use Dotenv\Dotenv;
 
 use Emeka\Evangelist\Client\GetUser;
 use Emeka\Evangelist\Client\GetGithubEvents;
 use Emeka\Evangelist\Client\GetStatus;
 
-$t = new GetStatus('andela-eosuagwu');
+
+$dotenv = new Dotenv(__DIR__ );
+$dotenv->load();
+$github_username = getenv('github_username');
+$t = new GetStatus($github_username);
 var_dump($t->getStatus());
+
 
 
 

@@ -2,10 +2,8 @@
 [![Build Status](https://travis-ci.org/andela-eosuagwu/Evangelist.svg?branch=master)](https://travis-ci.org/andela-eosuagwu/Evangelist)
 [![Quality Score](https://img.shields.io/scrutinizer/g/andela-eosuagwu/Evangelist.svg?style=flat-square)](https://scrutinizer-ci.com/g/andela-eosuagwu/Evangelist)
 
-
-
 # Evangelist
-This is a light PHP package that helps you access Github user infomation from Github API.
+This is a light PHP package that helps you access Github user status and more from Github API.
 
 # Install
 Via Composer
@@ -24,8 +22,8 @@ $ composer install
 # Usage
 
 ```
-$user = new GetUser('git_user_name');
-echo $user->getName();
+$user = new GetUserStatus('$git_username');
+echo $user->getStatus();
 ```
 # Testing
 To test, type the following into the terminal from the project directory

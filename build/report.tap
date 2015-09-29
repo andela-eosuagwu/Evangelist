@@ -1,6 +1,0 @@
-TAP version 13
-ok 1 - Test\ExampleTest::test_getGithubUser_return_array
-# 
-ok 2 - Test\ExampleTest::test_getGithubUser
-ok 3 - Test\ExampleTest::test_user_id_return_int
-1..3

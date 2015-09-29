@@ -1,5 +1,8 @@
 
-[![Coverage Status](https://coveralls.io/repos/andela-eosuagwu/Evangelist/badge.svg?branch=master&service=github)](https://coveralls.io/github/andela-eosuagwu/Evangelist?branch=master)
+[![Build Status](https://travis-ci.org/andela-eosuagwu/Evangelist.svg?branch=master)](https://travis-ci.org/andela-eosuagwu/Evangelist)
+[![Quality Score](https://img.shields.io/scrutinizer/g/andela-eosuagwu/Evangelist.svg?style=flat-square)](https://scrutinizer-ci.com/g/andela-eosuagwu/Evangelist)
+
+
 
 # Evangelist
 This is a light PHP package that helps you access Github user infomation from Github API.

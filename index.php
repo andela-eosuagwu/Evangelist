@@ -7,9 +7,12 @@ require "vendor/autoload.php";
 
 use Emeka\Evangelist\Client\GetUser;
 use Emeka\Evangelist\Client\GetGithubEvents;
+use Emeka\Evangelist\Client\GetStatus;
 
-$t = new GetUser('andela-ftchirou');
-var_dump($t->getId());
+$t = new GetStatus('andela-eosuagwu');
+var_dump($t->getStatus());
+
+
 
 //echo $t->getGithubEvents();
 //echo $t->getGithubUserRepoEvent( 'andela-eosuagwu', 'Evangelist');

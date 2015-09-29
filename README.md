@@ -1,5 +1,6 @@
 
-
+[![Build Status](https://travis-ci.org/andela-eosuagwu/Evangelist.svg?branch=master)](https://travis-ci.org/andela-eosuagwu/Evangelist)
+[![Quality Score](https://img.shields.io/scrutinizer/g/andela-eosuagwu/Evangelist.svg?style=flat-square)](https://scrutinizer-ci.com/g/andela-eosuagwu/Evangelist)
 
 
 

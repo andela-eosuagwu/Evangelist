@@ -21,8 +21,7 @@ class GetUser extends Evangelist
     */
     public function getGithubUserInfoString()
     {
-        $data =  $this->processUserInfo($this->github_username);
-        return $data;
+        return $this->processUserInfo($this->github_username);
     }
 
     /*

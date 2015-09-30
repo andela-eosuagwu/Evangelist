@@ -20,22 +20,21 @@ class GetStatus extends Evangelist
     */
     public function statusLogic( $status )
     {
-        if ( $status <= 5 )
+        if ( $status >= 5 && $status <= 10 )
         {
-            return $this->github_username . " Please work harder, we need the world to be a better place";
+            return "Damn It!!! Please make the world better, Oh Ye Prodigal Evangelist";
         }
-        elseif ( $status >= 20 )
+
+        if ( $status >= 11 && $status <= 20 )
         {
-            return $this->github_username . ' Keep Up The Good Work, I crown you Associate Evangelist';
+            return "Keep Up The Good Work, I crown you Associate Evangelist";
         }
-        elseif ( $status >= 30 )
+
+        if ( $status >= 21 )
         {
-            return 'Wow ' . $this->github_username . ' I crown you Most Senior Evangelist. Thanks for making the world a better place';
+            return "Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place";
         }
-        else
-        {
-            return "Damn It!!! " . $this->github_username . " Please make the world better, Oh Ye Prodigal Evangelist";
-        }
+
     }
 
     /*

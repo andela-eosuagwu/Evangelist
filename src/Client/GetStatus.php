@@ -6,7 +6,6 @@ use Emeka\Evangelist\Evangelist;
 
 class GetStatus extends Evangelist
 {
-
     protected $github_username;
 
     public function __construct ($github_username)
@@ -46,9 +45,7 @@ class GetStatus extends Evangelist
     */
     public function getStatus()
     {
-        $data =  $this->processUserInfo($this->github_username);
-        $status =  json_decode($data, true);
-        $status = $status['id'];
+        $status =  json_decode($this->processUserInfo($this->github_username), true)['id'];
         return $this->statusLogic($status);
     }
 

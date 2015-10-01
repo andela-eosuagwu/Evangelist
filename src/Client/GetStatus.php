@@ -44,7 +44,7 @@ class GetStatus extends Evangelist
     */
     public function getStatus()
     {
-        $status =  json_decode($this->processUserInfo($this->github_username), true)['id'];
+        $status =  json_decode($this->getUserStatus($this->github_username), true)['id'];
         return $this->statusLogic($status);
     }
 

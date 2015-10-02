@@ -21,8 +21,23 @@ $ composer install
 
 # Usage
 
+###First
+
+Create .env file in your root `Directory`
+
+Then add the following
+
+* client_id         ="client id"
+* github_org        ="Org name"
+* github_repo       ="repo name"
+* client_secret     ="client secret"
+* github_username   ="username"
+* github_password   ="password"
+
+
+
 ```
-$user = new GetUserStatus('$git_username');
+$user = new GetUserStatus();
 echo $user->getStatus();
 ```
 # Testing

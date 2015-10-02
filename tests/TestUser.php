@@ -1,23 +1,22 @@
 <?php
 namespace Test;
 
+use PHPUnit_Framework_TestCase;
 use Emeka\Evangelist\Evangelist;
 use Emeka\Evangelist\Client\GetUser;
-
-class ExampleTest extends \PHPUnit_Framework_TestCase
+class ExampleTest extends PHPUnit_Framework_TestCase
 {
-
     public function test_getGithubUser_return_array()
     {
         $evangelist = new GetUser('andela-eosuagwu');
         $data = $evangelist->getGithubUser();
-         $this->assertInternalType('array', $data);
+        $this->assertInternalType('array', $data);
     }
 
     public function test_getGithubUser()
     {
         $evangelist = new GetUser('andela-eosuagwu');
-        $data = $evangelist->getGithubUserInfo();
+        $data = $evangelist->getGithubUserInfoString();
         $this->assertInternalType('string', $data);
     }
 

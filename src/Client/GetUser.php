@@ -2,16 +2,17 @@
 
 namespace Emeka\Evangelist\Client;
 
+use Emeka\Evangelist\Setup;
 use Emeka\Evangelist\Evangelist;
 
 class GetUser extends Evangelist
 {
-
     protected $github_username;
 
-    public function __construct ($github_username)
+    public function __construct ()
     {
-        $this->github_username = $github_username;
+        $access = new Setup;
+        $this->github_username = $access->github_username;
     }
 
     /*

@@ -2,10 +2,23 @@
 
 namespace Emeka\Evangelist\Client;
 
+use Emeka\Evangelist\Setup;
 use Emeka\Evangelist\Evangelist;
 
 class GetGithubEvents extends Evangelist
 {
+
+    protected $github_org;
+    protected $github_repo;
+    protected $github_username;
+
+    public function __construct ()
+    {
+        $access = new Setup;
+        $this->github_org       = $access->github_org;
+        $this->github_repo      = $access->github_repo;
+        $this->github_username  = $access->github_username;
+    }
 
     /*
     | getGithubEvents fetch current events on Github
@@ -23,9 +36,9 @@ class GetGithubEvents extends Evangelist
     | Accepts two parameters @github_username and @github_repo
     | @return array of objects
     */
-    public function getGithubUserRepoEvent( $github_username, $github_repo )
+    public function getGithubUserRepoEvent( )
     {
-        $url = "https://api.github.com/repos/$github_username/$github_repo/events";
+        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/events";
         return $this->processData( $url );
     }
 
@@ -34,9 +47,9 @@ class GetGithubEvents extends Evangelist
     | Accepts two parameters @github_username and @github_repo
     | @return array of objects
     */
-    public function getGithubUserRepoIssues( $github_username, $github_repo)
+    public function getGithubUserRepoIssues()
     {
-        $url = "https://api.github.com/repos/$github_username/$github_repo/issues/events";
+        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/events";
         return $this->processData( $url );
     }
 
@@ -45,9 +58,9 @@ class GetGithubEvents extends Evangelist
     | Accepts two parameters @github_username and @github_repo
     | @return array of objects
     */
-    public function getGithubUserNetworkEventsIssues( $github_username, $github_repo)
+    public function getGithubUserNetworkEventsIssues()
     {
-        $url = "https://api.github.com/repos/$github_username/$github_repo/issues/events";
+        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/issues/events";
         return $this->processData( $url );
     }
 
@@ -56,9 +69,9 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @org
     | @return array of objects
     */
-    public function getGithubOrgEvents( $org )
+    public function getGithubOrgEvents()
     {
-        $url = "https://api.github.com/orgs/$org/events";
+        $url = "https://api.github.com/orgs/$this->github_org/events";
         return $this->processData( $url );
     }
 
@@ -67,9 +80,9 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @github_username
     | @return array of objects
     */
-    public function getGithubUserLastEvent( $github_username )
+    public function getGithubUserLastEvent()
     {
-        $url = "https://api.github.com/users/$github_username/received_events";
+        $url = "https://api.github.com/users/$this->github_username/received_events";
         return $this->processData( $url );
     }
 
@@ -78,9 +91,9 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @github_username
     | @return array of objects
     */
-    public function getGithubUserLastReceivedEvent( $github_username )
+    public function getGithubUserLastReceivedEvent()
     {
-        $url = "https://api.github.com/users/$github_username/received_events/public";
+        $url = "https://api.github.com/users/$this->github_username/received_events/public";
         return $this->processData( $url );
     }
 
@@ -89,9 +102,9 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @github_username
     | @return array of objects
     */
-    public function getGithubUserLastEventPerformed( $github_username )
+    public function getGithubUserLastEventPerformed()
     {
-        $url = "https://api.github.com/users/$github_username/events";
+        $url = "https://api.github.com/users/$this->github_username/events";
         return $this->processData( $url );
     }
 
@@ -100,9 +113,9 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @github_username
     | @return array of objects
     */
-    public function getGithubUserLastPublicEventPerformed( $github_username )
+    public function getGithubUserLastPublicEventPerformed()
     {
-        $url = "https://api.github.com/users/$github_username/events/public";
+        $url = "https://api.github.com/users/$this->github_username/events/public";
         return $this->processData( $url );
     }
 
@@ -111,10 +124,11 @@ class GetGithubEvents extends Evangelist
     | Accepts one parameter @github_username
     | @return array of objects
     */
-    public function getGithubUserOrgLastEvent( $github_username, $org )
+    public function getGithubUserOrgLastEvent()
     {
-        $url = "https://api.github.com/users/$github_username/events/orgs/$org";
+        $url = "https://api.github.com/users/$this->github_username/events/orgs/$this->github_org";
         return $this->processData( $url );
+
     }
 
 }

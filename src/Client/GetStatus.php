@@ -2,15 +2,17 @@
 
 namespace Emeka\Evangelist\Client;
 
+use Emeka\Evangelist\Setup;
 use Emeka\Evangelist\Evangelist;
 
 class GetStatus extends Evangelist
 {
     protected $github_username;
 
-    public function __construct ($github_username)
+    public function __construct ()
     {
-        $this->github_username = $github_username;
+        $access = new Setup;
+        $this->github_username = $access->github_username;
     }
 
     /*
@@ -34,7 +36,6 @@ class GetStatus extends Evangelist
         {
             return "Yeah, I crown you Most Senior Evangelist. Thanks for making the world a better place";
         }
-
     }
 
     /*

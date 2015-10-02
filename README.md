@@ -34,7 +34,7 @@ Then add the following
 * github_username   ="username"
 * github_password   ="password"
 
-
+### Then
 
 ```
 $user = new GetUserStatus();

@@ -37,11 +37,11 @@ class Evangelist
         return $this->processData( $url );
     }
 
-    public function getUserStatus( $git_username )
-    {
-            $url = "https://api.github.com/users/". $git_username . "?" . $this->github_client_id . "&" . $this->github_client_secret;
-            return $this->processData( $url );
-    }
+    // public function getUserStatus( $git_username )
+    // {
+    //         $url = "https://api.github.com/users/". $git_username . "?" . $this->github_client_id . "&" . $this->github_client_secret;
+    //         return $this->processData( $url );
+    // }
 
 }
 

@@ -16,60 +16,42 @@ class Setup
 
     public function __construct ()
     {
-        $this->github_org              = $this->github_org();
-        $this->github_repo              = $this->github_repo();
-        $this->github_username          = $this->github_username();
-        $this->github_password          = $this->github_password();
-        $this->github_client_id         = $this->github_client_id();
-        $this->github_client_secret     = $this->github_client_secret();
-    }
-
-    protected function getAccess()
-    {
         $dotenv = new Dotenv(__DIR__ . "/../" );
-        return $dotenv->load();
+        $dotenv->load();
+        $this->github_username          = getenv('github_username');
+        $this->github_repo              = getenv('github_repo');
+        $this->github_password          = getenv('github_password');
+        $this->github_client_id         = getenv('client_id');
+        $this->github_client_secret     = getenv('client_secret');
     }
 
-    public function github_username()
+    protected function github_username()
     {
-        $this->getAccess();
-        return getenv('github_username');
+        return $this->github_username;
     }
 
-    public function github_password()
+    protected function github_password()
     {
-        $this->getAccess();
-        return getenv('github_password');
+        return $this->github_password;
     }
 
-    public function github_client_id()
+    protected function github_repo()
     {
-        $this->getAccess();
-        return getenv('client_id');
+        return $this->github_repo;
     }
 
-    public function github_client_secret()
+    protected function github_client_id()
     {
-        $this->getAccess();
-        return getenv('client_secret');
+        return $this->github_client_id;
     }
 
-    public function github_repo()
+    protected function github_client_secret()
     {
-        $this->getAccess();
-        return getenv('github_repo');
+        return $this->github_client_secret;
     }
-
-    public function github_org()
-    {
-        $this->getAccess();
-        return getenv('github_org');
-    }
-
 
 }
 
-?>
 
 
 

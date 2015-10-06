@@ -2,13 +2,15 @@
 
 namespace Emeka\Evangelist\Exception;
 
+use Exception;
+
 /**
  * Class NullUsernameException
  *
  * @package League\Evangelist
  */
 
-class NullUserException extends \Exception
+class NullUserException extends Exception
 {
     /**
      * Handles inexistent username

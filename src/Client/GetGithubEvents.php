@@ -17,12 +17,12 @@ class GetGithubEvents extends Evangelist
     public function __construct ()
     {
         $access = new Setup;
-        $this->github_org       = $access->getGithubOrg();
-        $this->github_repo      = $access->getGithubRepo();
-        $this->github_username  = $access->getGithubUsername();
+        $this->github_org           = $access->getGithubOrg();
+        $this->github_repo          = $access->getGithubRepo();
+        $this->github_username      = $access->getGithubUsername();
         $this->github_org_link      = "https://api.github.com/repos";
-        $this->github_user_link      = "https://api.github.com/users";
-        $this->github_repo_link      = "https://api.github.com/repos";
+        $this->github_user_link     = "https://api.github.com/users";
+        $this->github_repo_link     = "https://api.github.com/repos";
     }
 
     /*

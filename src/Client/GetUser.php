@@ -20,7 +20,7 @@ class GetUser extends Evangelist
     | Accepts no parameter
     | @return json response
     */
-    public function getGithubUserAsArray()
+    public function getGithubUserInfoString()
     {
         return $this->getUserInfo($this->github_username);
     }
@@ -43,7 +43,7 @@ class GetUser extends Evangelist
     */
     public function getId()
     {
-        return $this->getGithubUser()['id'];
+        return $this->getGithubUserAsArray()['id'];
     }
 
     /*
@@ -53,7 +53,7 @@ class GetUser extends Evangelist
     */
     public function getLogin()
     {
-        return $this->getGithubUser()['login'];
+        return $this->getGithubUserAsArray()['login'];
     }
 
     /*
@@ -63,7 +63,7 @@ class GetUser extends Evangelist
     */
     public function getName()
     {
-        return $this->getGithubUser()['name'];
+        return $this->getGithubUserAsArray()['name'];
     }
 
     /*
@@ -73,7 +73,7 @@ class GetUser extends Evangelist
     */
     public function getAvatar()
     {
-        return $this->getGithubUser()['avatar_url'];
+        return $this->getGithubUserAsArray()['avatar_url'];
     }
 
     /*
@@ -83,7 +83,7 @@ class GetUser extends Evangelist
     */
     public function getUrl()
     {
-        return $this->getGithubUser()['url'];
+        return $this->getGithubUserAsArray()['url'];
     }
 
     /*
@@ -93,7 +93,7 @@ class GetUser extends Evangelist
     */
     public function getHtmlUrl()
     {
-        return $this->getGithubUser()['html_url'];
+        return $this->getGithubUserAsArray()['html_url'];
     }
 
     /*
@@ -103,7 +103,7 @@ class GetUser extends Evangelist
     */
     public function getType()
     {
-        return $this->getGithubUser()['type'];
+        return $this->getGithubUserAsArray()['type'];
     }
 
     /*
@@ -113,7 +113,7 @@ class GetUser extends Evangelist
     */
     public function getCompany()
     {
-        return $this->getGithubUser()['company'];
+        return $this->getGithubUserAsArray()['company'];
     }
 
     /*
@@ -123,7 +123,7 @@ class GetUser extends Evangelist
     */
     public function getLocation()
     {
-        return $this->getGithubUser()['location'];
+        return $this->getGithubUserAsArray()['location'];
     }
 
     /*
@@ -133,7 +133,7 @@ class GetUser extends Evangelist
     */
     public function getEmail()
     {
-        return $this->getGithubUser()['email'];
+        return $this->getGithubUserAsArray()['email'];
     }
 
     /*
@@ -143,7 +143,7 @@ class GetUser extends Evangelist
     */
     public function getFollowing()
     {
-        return $this->getGithubUser()['following'];
+        return $this->getGithubUserAsArray()['following'];
     }
 
     /*
@@ -153,7 +153,7 @@ class GetUser extends Evangelist
     */
     public function getFollowers()
     {
-        return $this->getGithubUser()['followers'];
+        return $this->getGithubUserAsArray()['followers'];
     }
 
     /*
@@ -163,7 +163,7 @@ class GetUser extends Evangelist
     */
     public function getCreatedAt()
     {
-        return $this->getGithubUser()['created_at'];
+        return $this->getGithubUserAsArray()['created_at'];
     }
 
     /*
@@ -173,7 +173,7 @@ class GetUser extends Evangelist
     */
     public function getUpdatedAt()
     {
-        return $this->getGithubUser()['updated_at'];
+        return $this->getGithubUserAsArray()['updated_at'];
     }
 
 }

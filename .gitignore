@@ -1,5 +1,5 @@
-composer.lock
 /vendor
 index.php
 .env
 /build
+composer.lock

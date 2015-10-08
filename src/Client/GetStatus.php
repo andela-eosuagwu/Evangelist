@@ -12,7 +12,7 @@ class GetStatus extends Evangelist
     public function __construct ()
     {
         $access = new Setup;
-        $this->github_username = $access->githubUsername();
+        $this->github_username = $access->getGithubUsername();
     }
 
     /*

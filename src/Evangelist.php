@@ -12,8 +12,8 @@ class Evangelist
     public function __construct ()
     {
         $access = new Setup;
-        $this->github_client_id     = $access->github_client_id;
-        $this->github_client_secret = $access->github_client_secret;
+        $this->github_client_id     = $access->getGithubClientId();
+        $this->github_client_secret = $access->getGithubClientSecret();
     }
 
     /*

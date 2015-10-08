@@ -25,27 +25,27 @@ class Setup
         $this->github_client_secret     = getenv('client_secret');
     }
 
-    public function githubUsername()
+    public function getGithubUsername()
     {
         return $this->github_username;
     }
 
-    public function githubPassword()
+    public function getGithubPassword()
     {
         return $this->github_password;
     }
 
-    public function githubRepo()
+    public function getGithubRepo()
     {
         return $this->github_repo;
     }
 
-    public function githubClient_id()
+    public function getGithubClientId()
     {
         return $this->github_client_id;
     }
 
-    public function githubClient_secret()
+    public function getGithubClientSecret()
     {
         return $this->github_client_secret;
     }

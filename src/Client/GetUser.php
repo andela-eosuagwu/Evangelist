@@ -16,11 +16,11 @@ class GetUser extends Evangelist
     }
 
     /*
-    | getGithubUserInfoString get user info on Github
+    | getGithubUserInfoAsJson get user info on Github
     | Accepts no parameter
     | @return json response
     */
-    public function getGithubUserInfoString()
+    public function getGithubUserInfoAsJson()
     {
         return $this->getUserInfo($this->github_username);
     }
@@ -32,7 +32,7 @@ class GetUser extends Evangelist
     */
     public function getGithubUserAsArray()
     {
-        $data =  $this->getGithubUserInfoString();
+        $data =  $this->getGithubUserInfoAsJson();
         return json_decode($data, true);
     }
 

@@ -15,9 +15,9 @@ class GetGithubEvents extends Evangelist
     public function __construct ()
     {
         $access = new Setup;
-        $this->github_org       = $access->github_org;
-        $this->github_repo      = $access->github_repo;
-        $this->github_username  = $access->github_username;
+        $this->github_org       = $access->githubOrg();
+        $this->github_repo      = $access->githubRepo();
+        $this->github_username  = $access->githubUsername();
     }
 
     /*

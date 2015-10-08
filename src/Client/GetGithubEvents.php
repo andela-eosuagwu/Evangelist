@@ -8,9 +8,11 @@ use Emeka\Evangelist\Evangelist;
 class GetGithubEvents extends Evangelist
 {
 
-    protected $github_org;
     protected $github_repo;
     protected $github_username;
+    protected $github_org_link;
+    protected $github_repo_link;
+    protected $github_user_link;
 
     public function __construct ()
     {
@@ -18,6 +20,9 @@ class GetGithubEvents extends Evangelist
         $this->github_org       = $access->getGithubOrg();
         $this->github_repo      = $access->getGithubRepo();
         $this->github_username  = $access->getGithubUsername();
+        $this->github_org_link      = "https://api.github.com/repos";
+        $this->github_user_link      = "https://api.github.com/users";
+        $this->github_repo_link      = "https://api.github.com/repos";
     }
 
     /*
@@ -38,7 +43,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserRepoEvent( )
     {
-        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/events";
+        $url = $this->github_repo_link . "/$this->github_username/$this->github_repo/events";
         return $this->processData( $url );
     }
 
@@ -49,7 +54,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserRepoIssues()
     {
-        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/events";
+        $url = $this->github_repo_link . "/$this->github_username/$this->github_repo/events";
         return $this->processData( $url );
     }
 
@@ -60,7 +65,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserNetworkEventsIssues()
     {
-        $url = "https://api.github.com/repos/$this->github_username/$this->github_repo/issues/events";
+        $url =  $this->github_repo_link . "/$this->github_username/$this->github_repo/issues/events";
         return $this->processData( $url );
     }
 
@@ -71,7 +76,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubOrgEvents()
     {
-        $url = "https://api.github.com/orgs/$this->github_org/events";
+        $url = $this->github_org_link . "/$this->github_org/events";
         return $this->processData( $url );
     }
 
@@ -82,7 +87,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserLastEvent()
     {
-        $url = "https://api.github.com/users/$this->github_username/received_events";
+        $url = $this->github_user_link . "/$this->github_username/received_events";
         return $this->processData( $url );
     }
 
@@ -93,7 +98,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserLastReceivedEvent()
     {
-        $url = "https://api.github.com/users/$this->github_username/received_events/public";
+        $url = $this->github_user_link . "/$this->github_username/received_events/public";
         return $this->processData( $url );
     }
 
@@ -104,7 +109,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserLastEventPerformed()
     {
-        $url = "https://api.github.com/users/$this->github_username/events";
+        $url = $this->github_user_link . "/$this->github_username/events";
         return $this->processData( $url );
     }
 
@@ -115,7 +120,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserLastPublicEventPerformed()
     {
-        $url = "https://api.github.com/users/$this->github_username/events/public";
+        $url = $this->github_user_link . "/$this->github_username/events/public";
         return $this->processData( $url );
     }
 
@@ -126,7 +131,7 @@ class GetGithubEvents extends Evangelist
     */
     public function getGithubUserOrgLastEvent()
     {
-        $url = "https://api.github.com/users/$this->github_username/events/orgs/$this->github_org";
+        $url = $this->github_user_link . "/$this->github_username/events/orgs/$this->github_org";
         return $this->processData( $url );
 
     }
